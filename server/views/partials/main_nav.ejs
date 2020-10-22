@@ -1,0 +1,187 @@
+    <header>
+        <div class="">
+            
+            <!-- USED IF TO DYNAMICALLY CHANGE LANDING PAGE -->
+            <% if(title == "Home") { %> 
+                <video src="/Assets/videos/welcome.mp4" loop muted uk-video="autoplay: inview" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} uk-card-hover"></video>
+            <% } else if(title == "About"){ %>
+                <img src="/Assets/images/about5.jpeg" alt="" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} uk-card-hover">
+            <% } else if(title == "Projects"){ %>
+                <div class="uk-inline">
+                    <img src="/Assets/images/Projects.jpg" alt="" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} uk-card-hover">
+                    <div class="uk-overlay uk-overlay-default uk-position-center">
+                        <h1>Projects</h1>
+                    </div>
+                </div> 
+            <% } else if(title == "Services"){ %>
+                <img src="/Assets/images/Services.jpg" alt="" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} uk-card-hover">
+            <% } else if(title == "Contact"){ %>
+                <video src="/Assets/videos/phone.mp4" loop muted uk-video="autoplay: inview" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} uk-card-hover"></video>
+                <div class="uk-overlay uk-overlay-default uk-position-center">
+                    <h1>Contact</h1>
+                </div>
+            <% } else if(title == "Error") { %>
+                <video src="/Assets/videos/error.mp4" loop muted uk-video="autoplay: inview" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} uk-card-hover"></video>
+                <div class="uk-overlay uk-overlay-default uk-position-center text-center">
+                    <h1 class="mb-0">Woah!</h1>
+                    <h2 class="mt-0">How did you get here?</h2>
+                </div>
+            <% }  else { %>
+                 
+            <% } %>
+
+            <!-- USED IF TO SET TRANSPARENCY OF NAVBAR -->
+            <div class="uk-position-top">
+            <% if(title == "Home") { %> 
+                <nav class="uk-container uk-navbar-container " uk-navbar>
+            <% } else if(title == "About"){ %>
+                <nav class="uk-container uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+            <% } else if(title == "Projects"){ %>
+                <nav class="uk-container uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+            <% } else if(title == "Services"){ %>
+                <nav class="uk-container uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <% } else { %>
+                <nav class="uk-container uk-navbar-container" uk-navbar>
+            <% } %>
+            
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+
+                            <!-- USED IF TO DYNAMICALLY CHANGE -->
+                            <!-- LOGO BETWEEN LIGHT AND DARK VERSIONS -->
+                            <% if(title == "Home") { %> 
+                                <a class="uk-navbar-item uk-logo uk-logo" href="/"><img src="/Assets/images/Logo.png" alt="logo" style="height: 50px; width: 50px;"></a>
+                            <% } else if(title == "About"){ %>
+                                <a class="uk-navbar-item uk-logo uk-logo" href="/"><img src="/Assets/images/Logo1.png" alt="logo" style="height: 50px; width: 50px;"></a>
+                            <% } else if(title == "Projects"){ %>
+                                <a class="uk-navbar-item uk-logo uk-logo" href="/"><img src="/Assets/images/Logo1.png" alt="logo" style="height: 50px; width: 50px;"></a>
+                            <% } else if(title == "Contact"){ %>
+                                <a class="uk-navbar-item uk-logo uk-logo" href="/"><img src="/Assets/images/Logo.png" alt="logo" style="height: 50px; width: 50px;"></a>
+                            <% } else { %>
+                                <a class="uk-navbar-item uk-logo uk-logo" href="/"><img src="/Assets/images/Logo.png" alt="logo" style="height: 50px; width: 50px;"></a>
+                            <% } %>
+
+                            <!-- USED IF IN THE FOLLOWING SECTIONS -->
+                            <!-- TO SET ACTIVE STATE ON NAVIGATION LINKS -->
+                            <% if(title == "Home") { %> 
+                            <li class="uk-active">
+                            <% } else { %>
+                            <li class="">
+                            <% } %>
+                            <a href="/home" class="">
+                                <strong>
+                                <span uk-icon="icon: home;"></span>&nbsp;&nbsp;Home
+                                </strong> 
+                            </a>
+                            </li>
+                            
+                            <% if(title == "About") { %> 
+                            <li class="uk-active">
+                            <% } else { %>
+                            <li class="">
+                            <% } %>
+                            <a href="/about" class="">
+                                <strong>
+                                <span uk-icon="icon: user;"></span>&nbsp;&nbsp;About
+                                </strong> 
+                            </a>
+                            </li>
+
+                            <% if(title == "Projects") { %> 
+                            <li class="uk-active">
+                            <% } else { %>
+                            <li class="">
+                            <% } %>
+                            <a href="/projects" class="">
+                                <strong>
+                                <span uk-icon="icon: grid;"></span>&nbsp;&nbsp;Projects
+                                </strong> 
+                            </a>
+                            </li>
+
+                            <% if(title == "Services") { %> 
+                            <li class="uk-active">
+                            <% } else { %>
+                            <li class="">
+                            <% } %>
+                            <a href="/services" class="">
+                                <strong>
+                                <span uk-icon="icon: database;"></span>&nbsp;&nbsp;Services
+                                </strong> 
+                            </a>
+                            </li>
+
+                            <!-- <% if(title == "Contact List") { %> 
+                            <li class="uk-active">
+                            <% } else { %>
+                            <li class="">
+                            <% } %>
+                            <a href="/contact-list" class="">
+                                <strong>
+                                <span uk-icon="icon: list;"></span>&nbsp;&nbsp;Contact List
+                                </strong> 
+                            </a>
+                            </li> -->
+                            
+                            <!-- CONDITIONAL DISPLAY FOR CONTACT LIST -->
+                             <% if(typeof displayName == 'string' && displayName) { %> 
+                                <% if(title == "Contact List") { %> 
+                                    <li class="uk-active">
+                                <% } else { %>
+                                    <li class="">
+                                <% } %>
+                                        <a href="/contact-list" class="">
+                                            <strong>
+                                            <span uk-icon="icon: list;"></span>&nbsp;&nbsp;Contact List
+                                            </strong> 
+                                        </a>
+                                    </li>
+                            <% }  else { %>
+                                
+                            <% } %>
+
+                            <% if(title == "Contact") { %> 
+                            <li class="uk-active">
+                            <% } else { %>
+                            <li class="">
+                            <% } %>
+                            <a href="/contact" class="">
+                                <strong>
+                                <span uk-icon="icon: phone;"></span>&nbsp;&nbsp;Contact
+                                </strong> 
+                            </a>
+                            </li>
+
+                            <!-- CONDIITONAL DISPLAY FOR LOGIN/OUT AND DISPLAYNAME -->
+                            <% if(typeof displayName == 'string' && displayName) { %> 
+                                <li>
+                                    <div class="uk-navbar-item uk-text-uppercase">
+                                        <strong>
+                                            Welcome, <%= displayName %>
+                                        </strong> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/logout" class="">
+                                        <strong>
+                                        <span uk-icon="icon: sign-out;"></span>&nbsp;&nbsp;Logout %>
+                                        </strong> 
+                                    </a>
+                                </li>
+                            <% }  else { %>
+                                <li>
+                                    <a href="/login" class="">
+                                        <strong>
+                                        <span uk-icon="icon: sign-in;"></span>&nbsp;&nbsp;Login
+                                        </strong> 
+                                    </a>
+                                </li>
+                            <% } %>
+
+                        </ul>
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>

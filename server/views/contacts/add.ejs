@@ -1,0 +1,60 @@
+<%- include ../partials/header.ejs %> 
+
+<%- include ../partials/main_nav.ejs %>  
+
+
+    <main >
+        <div class="uk-container" style="padding-top: 10%; padding-bottom: 5%;" uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 100; repeat: true">
+            <div class="uk-card uk-card-default uk-card-hover">
+              <div>
+                <div class="uk-card-body">
+                <img src="/Assets/images/Logo1.png" alt="" class="mx-auto d-block" style="height: 80px; width: 80px;">
+                <h2 class="text-center">Add New Contact</h2>
+    
+                  <!-- BEGIN SECTION : FORM  -->
+                  <form class="uk-form-horizontal my-5 w-50 d-block mx-auto" method="POST">
+    
+                    <div >
+                        <!-- NAME -->
+                        <div class="mb-3">
+                            <label class="uk-form-label uk-text-large" for="contactName">Name</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-form-large " id="contactName" type="text" placeholder="John / Jane" name="contactName" required>
+                            </div>
+                        </div>
+    
+                         <!-- PHONE NUMBER -->
+                         <div class="mb-3">
+                            <label class="uk-form-label uk-text-large" for="contactNumber">Number</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-form-large " id="contactNumber" type="tel" placeholder="123-456-7890" name="contactNumber" required>
+                            </div>
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="mb-3">
+                            <label class="uk-form-label uk-text-large" for="contactEmail">Email</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-form-large " id="contactEmail" type="email" placeholder="address@server.com" name="contactEmail" required>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <!-- SUBMIT AND CANCEL -->
+                    <div class="text-center mt-4">
+                        <button class="uk-button uk-button-primary " type="submit" id="sendButton"><span uk-icon="cloud-upload"></span>&nbsp;&nbsp;Submit</button>
+                        <a class="uk-button uk-button-secondary" href="/contact-list"><span class="uk-margin-small-right" uk-icon="close"></span>Cancel</a>
+                    </div>  
+    
+                  </form> 
+                  <!-- END SECTION : FORM  -->
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>

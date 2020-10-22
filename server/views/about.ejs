@@ -1,0 +1,65 @@
+<%- include partials/header.ejs %> 
+
+<%- include partials/main_nav.ejs %> 
+
+    <main uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 100; repeat: true">
+        <div class="uk-container my-5">
+          <div class="uk-card uk-card-default uk-card-hover">
+            <div>
+              <div class="uk-card-body">
+                <img src="/Assets/images/Logo1.png" alt="" class="mx-auto d-block" style="height: 80px; width: 80px;">
+                <h2 class="text-center">Short Bio</h2>
+  
+                <p class="text-content">I'm a technophile, language enthusiast, and a lover of good food. When I'm not banging my head against the keyboard trying to program, I'm busy grabbing a book on comparative grammar going through conjugation exercises while snacking on something good. I speak several dialects of human and a handful of computer languages. Oh, and I love good design.  </p>
+  
+                <!-- DIVIDED SKILLS INTO 3 COLUMNS -->
+                <h2 class="text-center">Skills</h2>
+                <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                    <div>
+                        <dl class="uk-description-list">
+                        <h3>Programming</h3>
+                        <dt>C# Desktop + MSSQL</dt>
+                        <dd>Has experience in winforms app programming with MSSQL.</dd>
+                        <dt>MEAN Stack</dt>
+                        <dd>Has experience in using MEAN to build a full-stack app.</dd>
+                        <dt>PHP + XAMP</dt>
+                        <dd>Novice programmer in PHP</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl class="uk-description-list">
+                            <h3>Languages</h3>
+                            <dt>English</dt>
+                            <dd>Mother language fluency.</dd>
+                            <dt>Mandarin Chinese 普通话</dt>
+                            <dd>Business level fluency. HSK Level 5 Passer.</dd>
+                            <dt>Japanese 日本語</dt>
+                            <dd>Intermediate level fluency. JLPT N3 Passer. </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl class="uk-description-list">
+                        <h3>General</h3>
+                        <dt>Adobe Photoshop</dt>
+                        <dd>Intermediate level. Designed posters, flyers, and magazine layouts.</dd>
+                        <dt>Adobe Illustrator</dt>
+                        <dd>Intermediate level. Logo design and simple illustrations.</dd>
+                        <dt>Photography</dt>
+                        <dd>Hobby and enthusiast.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <!-- INTERNAL LINK TO DOWNLOAD CV -->
+                <a href="/Assets/Erwin Joshua Manuel CV.pdf">
+                  <button class="uk-button uk-button-primary mx-auto d-block mt-5">Link to CV</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+<%- include partials/bottom_nav.ejs %>           
+
+<%- include partials/footer.ejs %>   

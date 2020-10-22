@@ -1,0 +1,74 @@
+<%- include partials/header.ejs %> 
+
+<%- include partials/main_nav.ejs %>  
+
+<main uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 100; repeat: true">
+      <div class="uk-container my-5">
+        <div class="uk-card uk-card-default uk-card-hover">
+          <div>
+            <div class="uk-card-body">
+            <img src="/Assets/images/Logo1.png" alt="" class="mx-auto d-block" style="height: 80px; width: 80px;">
+            <h2 class="text-center">Let's Keep in Touch</h2>
+
+              <!-- BEGIN SECTION : FORM  -->
+              <form class="uk-form-horizontal my-5 w-50 d-block mx-auto">
+
+                <div >
+                    <!-- FIRST NAME -->
+                    <div class="mb-3">
+                        <label class="uk-form-label uk-text-large" for="FName">First Name</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-form-large " id="FName" type="text" placeholder="John / Jane" name="FName" required>
+                        </div>
+                    </div>
+
+                    <!-- LAST NAME -->
+                    <div class="mb-3">
+                        <label class="uk-form-label uk-text-large" for="LName">Last Name</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-form-large " id="LName" type="text" placeholder="Doe" name="LName" required>
+                        </div>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="mb-3">
+                        <label class="uk-form-label uk-text-large" for="Email">Email</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-form-large " id="Email" type="email" placeholder="address@server.com" name="Email" required>
+                        </div>
+                    </div>
+
+                    <!-- PHONE NUMBER -->
+                    <div class="mb-3">
+                        <label class="uk-form-label uk-text-large" for="TelNum">Phone Number</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-form-large " id="TelNum" type="tel" placeholder="123-456-7890" name="TelNum" required>
+                        </div>
+                    </div>
+
+                    <!-- TEXTAREA -->
+                    <div class="uk-margin">
+                        <textarea class="uk-textarea uk-text-large" rows="5" placeholder="Optional Message Here" name="Message" id="Message"></textarea>
+                    </div>
+
+                </div>
+                <p class="text-content text-center mt-5 my-2">Let's work hard everyday in building a world that is</p>
+                <h4 class="text-content text-center mt-0"> Good&nbsp;&nbsp;&nbsp;Fun&nbsp;&nbsp;&nbsp;Beautiful&nbsp;&nbsp;&nbsp;Together</h3>
+
+                <!-- SUBMIT AND RESET -->
+                <div class="text-center">
+                    <button class="uk-button uk-button-primary " type="submit" id="sendButton"><span uk-icon="cloud-upload"></span>&nbsp;&nbsp;Send</button>
+                    <button class="uk-button uk-button-danger " type="reset" id="cancelButton"><span uk-icon="close"></span>&nbsp;&nbsp;Cancel</button>
+                </div>  
+
+              </form> 
+              <!-- END SECTION : FORM  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<%- include partials/bottom_nav.ejs %>           
+
+<%- include partials/footer.ejs %>    

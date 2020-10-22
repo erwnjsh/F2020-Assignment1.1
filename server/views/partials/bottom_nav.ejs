@@ -1,0 +1,13 @@
+<!-- USED IF TO DYNAMICALLY ALTER FOOTER -->
+<!-- BETWEEN LIGHT AND DARK VERSION -->
+</footer>
+    <%  if(title == "Projects"){ %>
+        <nav class="navbar navbar-dark bg-dark " style="background-color: black !important;">
+          <a class="navbar-brand uk-container" href="#">&copy; Copyright <%= new Date().getFullYear();%> All Rights Reserved</a>
+        </nav>
+    <% } else { %>
+        <nav class="navbar navbar-light bg-light " >
+          <a class="navbar-brand uk-container" href="#">&copy; Copyright <%= new Date().getFullYear();%> All Rights Reserved</a>
+        </nav>
+    <% } %>
+<footer>

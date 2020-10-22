@@ -1,0 +1,32 @@
+/* BEGIN DOCUMENT HEADER 				*/
+/* FILE NAME    : app.css   			*/
+/* AUTHOR NAME	: Erwin Joshua Manuel 	*/
+/* STUDENT ID	: 301107750 			*/
+/* DATE CREATED : 10/5/2020 			*/
+/* END DOCUMENT HEADER 					*/
+
+
+/* CUSTOM CSS GOES HERE */
+/* FONT-RELATED STYLES */
+body, body h1, body h2, body h3, body a, body h4{
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+body a{
+    font-size: 16px !important;
+}
+
+uk-logo{
+    font-size: xx-large !important;
+}
+
+body text-content{
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+
+/* DEFAULT BODY GRADIENT BACKGROUND */
+body {
+	background: linear-gradient(0deg, #ffffff, #000000);
+}

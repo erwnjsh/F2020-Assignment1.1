@@ -1,0 +1,84 @@
+<%- include partials/header.ejs %> 
+
+<%- include partials/main_nav.ejs %> 
+
+    <div class="uk-container uk-card uk-card-default uk-card-hover my-5 py-5" uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 100; repeat: true">
+        <h1>Services Offered</h1>
+        <div>
+            <div uk-grid>
+                <div class="uk-width-auto@m">
+                    <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">C# Programming</a></li>
+                        <li><a href="#">Digital Design</a></li>
+                    </ul>
+                </div>
+                <div class="uk-width-expand@m">
+                    <ul id="component-tab-left" class="uk-switcher">
+
+                        <!-- BEGIN SECTION : WEB DESIGN -->
+                        <li>
+                            <article class="uk-article">
+                                <h2>Web Design</h2>
+                            
+                                <p class="uk-text-lead">Bootstrap | uiKit | Javascript | jQuery | MEAN</p>
+
+                                <div class="uk-panel uk-margin-small">
+                                    <img class="uk-align-left uk-margin-remove-adjacent" src="/Assets/images/webDev.jpg" width="485px" height="360px" alt="First Project">
+                                    <p class="text-justify">
+                                        I have a few years experience using Bootstrap v4 in building responsive web pages, although recently I have been trying to learn other front-end web frameworks like uikit. 
+                                    </p>
+                                    <p class="text-justify">
+                                        I also have experience in using vanilla JS and jQuery in building small algorithms as well as using it for enhancing UI elements.
+                                    </p>
+                                </div>   
+                            </article>
+                        </li>
+                        <!-- END SECTION : WEB DESIGN -->
+                        <!-- BEGIN SECTION : C# PROGRAMMING -->
+                        <li>
+                            <article class="uk-article">
+                                <h2>C# General Programming</h2>
+                            
+                                <p class="uk-text-lead">Winforms | MSSQL</p>
+
+                                <div class="uk-panel uk-margin-small">
+                                    <img class="uk-align-left uk-margin-remove-adjacent" src="/Assets/images/windows.jpg" width="485px" height="360px" alt="First Project">
+                                    <p class="text-justify">
+                                        I have experience in using C# from simple console programs to winforms that using multiple classes together. 
+                                    </p>
+                                    <p class="text-justify">
+                                        I also have experience in using winforms together with MSSQL in building a medium-sized application, tasked with recording sales and inventory.
+                                    </p>
+                                </div>   
+                            </article>
+                        </li>
+                        <!-- END SECTION : C# PROGRAMMING -->
+                        <!-- BEGIN SECTION : DIGITAL DESIGN -->
+                        <li>
+                            <article class="uk-article">
+                                <h2>Digital Design</h2>
+                            
+                                <p class="uk-text-lead">Adobe Photoshop | Adobe Illustrator</p>
+
+                                <div class="uk-panel uk-margin-small">
+                                    <img class="uk-align-left uk-margin-remove-adjacent" src="/Assets/images/adobe.jpg" width="485px" height="360px" alt="First Project">
+                                    <p class="text-justify">
+                                        I have extensive experience in using Adobe Photoshop in making posters, designing logos and handling the layout for magazines.  
+                                    </p>
+                                    <p class="text-justify">
+                                        I also have experience in Adobe Illustrator in making simple illustrations and company logos.
+                                    </p>
+                                </div>  
+                            </article>
+                        </li>
+                        <!-- END SECTION : DIGITAL DESIGN -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include partials/bottom_nav.ejs %>           
+
+<%- include partials/footer.ejs %> 
