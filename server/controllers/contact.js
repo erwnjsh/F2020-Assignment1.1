@@ -17,6 +17,18 @@ module.exports.displayContactList = (req, res, next) => {
             res.render('contacts/list', {title: 'Contact List', ContactList: ContactList, displayName: req.user ? req.user.displayName : ''});
         }
     });
+
+    // Contact.find().sort({"Contact_Name": -1}, (err, ContactList) => {
+    //     if(err)
+    //     {
+    //         return console.error(err);
+    //     }
+    //     else
+    //     {
+    //         //console.log(ContactList);
+    //         res.render('contacts/list', {title: 'Contact List', ContactList: ContactList, displayName: req.user ? req.user.displayName : ''});
+    //     } 
+    // })
 }
 
 module.exports.displayAddPage = (req, res, next) => {
